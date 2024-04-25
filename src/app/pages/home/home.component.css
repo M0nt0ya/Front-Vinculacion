@@ -1,12 +1,15 @@
 /* Estilos de la sección hero */
 .hero-section {
   position: relative;
-  background-color: #03A46A; /* Cambia esto al color que desees */
+  background-image: url('../../../assets/img/fondo.png'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .hero-content {
   position: absolute;
@@ -22,8 +25,12 @@
 .hero-content h1 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: #F2A922;
+  color: #ffffff;
+  -webkit-text-stroke-width: 5%; /* Ancho del borde */
+  text-shadow: 9px 9px 0 #17a94b, -9px -9px 0 #0783ba, 9px -9px 0 #fab32b, -9px 9px 0 #33586d; /* Sombras para simular el gradiente */
 }
+
+
 
 .hero-content p {
   font-size: 1.5em;
