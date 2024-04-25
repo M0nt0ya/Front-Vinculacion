@@ -1,0 +1,105 @@
+<app-header></app-header>
+
+<body class="paginas-internas">
+    <!--Menu superior-->
+    <section class="bienvenidos">
+        <!--Titulo de pagina-->
+        <div class="texto-encabezado text-center">
+            <div class="container">
+                <h1 class="display-4 wow bounceIn">Visión y Misión</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <main class="py-1">
+        <div class="container">
+            <div class="row">
+                <article class="col-md-8">
+                    <!--Texto fijo-->
+                    <br>
+                    <h2>Trabajamos para tu éxito</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolorum reprehenderit ducimus porro
+                        reiciendis vero ex, odit voluptatibus consequuntur, nulla perferendis atque, ipsam suscipit
+                        architecto est facere pariatur cupiditate culpa!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum saepe et dolor
+                        voluptatibus vero est, amet, ipsum iste eos nam debitis illo? Sapiente sequi enim perferendis et
+                        ipsam ex.</p>
+                    <!--Componente de acordeon para la mision, visión y los valores-->
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h4 class="mb-0">
+                                    <a class="btn btn-link" data-toggle="collapse" data-target="#tab-mision"
+                                        aria-controls="collapseOne">
+                                        Misión
+                                    </a>
+                                </h4>
+                            </div>
+
+                            <div id="tab-mision" class="collapse show" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error culpa soluta eum
+                                        inventore possimus temporibus alias totam optio laboriosam assumenda dolorem
+                                        voluptas consequatur reprehenderit excepturi, provident, quo, iure ratione
+                                        deleniti?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h4 class="mb-0">
+                                    <a class="btn btn-link collapsed" data-toggle="collapse" data-target="#tab-vision"
+                                        aria-controls="collapseTwo">
+                                        Visión
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="tab-vision" class="collapse" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto similique,
+                                        voluptate magni nesciunt quis distinctio? Illo eligendi voluptatibus minus
+                                        voluptatem maiores ratione totam quos ullam, ipsam consectetur aliquam dolores
+                                        numquam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </article>
+                <aside class="col-12 col-md-4">
+                    <img src="../../../assets/images/agencia.svg" alt="Nosotros">
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <a class="ir-arriba" data-scroll href="#encabezado"><i class="fas fa-arrow-circle-up" aria-hidden="true"></i></a>
+
+
+    <form (ngSubmit)="submitForm()">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+        </div>
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="formData.lastName" required>
+        </div>
+        <div>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" [(ngModel)]="formData.comment" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+</body>
+
+<app-footer></app-footer>

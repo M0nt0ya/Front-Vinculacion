@@ -1,0 +1,108 @@
+.rotating-image {
+    text-align: center;
+}
+
+.rotating-image img {
+    animation: slideRightToLeft 10s linear infinite;
+}
+
+@keyframes slideRightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Estilos generales */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contacto {
+    text-align: center;
+}
+
+.info-contacto {
+    margin-top: 20px;
+}
+
+/* Estilos específicos para las tarjetas de información */
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #f1f1f1;
+    padding: 15px;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.redes-sociales {
+    padding-left: 0;
+}
+
+.redes-sociales li {
+    margin-bottom: 15px;
+}
+
+.redes-sociales li a i {
+    margin-right: 10px;
+}
+
+/* Estilos específicos para los íconos de redes sociales */
+
+.fab {
+    color: #007bff;
+}
+
+/* Estilos específicos para la imagen giratoria */
+
+.rotating-image {
+    margin-bottom: 20px;
+}
+
+/* Estilos específicos para la sección de ubicación */
+
+.card-body p {
+    margin: 0;
+}
+
+/* Estilos específicos para el pie de página */
+
+app-footer {
+    margin-top: 20px;
+}

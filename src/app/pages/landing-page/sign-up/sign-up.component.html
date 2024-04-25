@@ -1,0 +1,45 @@
+<form [formGroup]="form" (ngSubmit)="signUp()">
+
+    <label>Nombre</label>
+    <div>
+        <span *ngIf="!form.get('firstName')?.valid && form.get('firstName')?.touched" style="color:red ;">Por favor,
+            introduzca su nombre de pila</span>
+        <input [formControlName]="'firstName'" type="text">
+    </div>
+
+    <label>Apellido</label>
+    <div>
+        <span *ngIf="!form.get('lastName')?.valid && form.get('lastName')?.touched" style="color:red ;">Por favor
+            ingrese su apellido</span>
+        <input [formControlName]="'lastName'" type="text">
+    </div>
+
+    <label>Nombre de Usuario</label>
+    <div>
+        <span *ngIf="username.errors?.['required'] && form.get('username')?.touched" style="color:red ;">Por favor,
+            ingrese un nombre de usuario</span>
+        <span *ngIf="username.errors?.['usernameExists']" style="color:red ;">Este nombre de usuario ha sido
+            tomado</span>
+        <input [formControlName]="'username'" type="text">
+    </div>
+    <label>Correo Electronico</label>
+    <div>
+        <span *ngIf="!form.get('email')?.valid && form.get('email')?.touched" style="color:red ;">Por favor
+            introduzca una dirección de correo electrónico válida</span>
+        <input [formControlName]="'email'" type="email" required autofocus>
+    </div>
+
+    <label>Contraseña</label>
+    <div>
+        <span *ngIf="!form.get('password')?.valid && form.get('password')?.touched" style="color:red ;">La
+            contraseña no puede estar vacía</span>
+        <input [formControlName]="'password'" type="password">
+    </div>
+
+    <input type="submit" value="Registrarse">
+
+    
+    <div class="pie-form">
+        <a href="/sign-in">¿Ya tienes una cuenta? Iniciar sesión.</a>
+    </div>
+</form>
