@@ -1,82 +1,44 @@
 .container {
-    padding-top: 4%;
-    margin-top: 4vh;
-    text-align: center;
-    width: 100%;
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+  color: #111111;
 }
 
-.card {
-    width: 250px;
-    /* Ancho de la carta */
-    height: 350px;
-    /* Altura de la carta */
-    overflow: hidden;
-    /* Oculta cualquier parte de la imagen que se salga de la carta */
-    display: inline-block;
-    /* Asegurar que el contenido se ajuste alrededor de la tarjeta */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.card:hover .card-body {
-    right: 0;
+.colaboradores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.card img {
-    width: 100%;
-    /* Ajustar imagen al ancho del contenedor */
-    height: 100%;
-    /* Ajustar imagen a la altura del contenedor */
-    object-fit: cover;
-    /* Recortar la imagen para que se ajuste al contenedor sin distorsionarse */
-    border-radius: 10px;
-    /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra */
+.colaborador {
+  width: 250px; /* Ancho aumentado */
+  height: 300px; /* Alto aumentado */
+  margin-bottom: 30px;
+  text-align: center;
+  border: 2px solid #13b57f; /* Borde verde */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado */
+  padding: 20px; /* Espaciado interno */
 }
 
-
-.occupation {
-    font-weight: bold;
+.colaborador img {
+  width: 120px; /* Ancho aumentado */
+  height: 120px; /* Alto aumentado */
+  border-radius: 50%;
+  margin-bottom: 20px; /* Espaciado inferior aumentado */
 }
 
-.descripcion {
-    font-size: small;
-    max-width: 35%;
-    margin: 20px auto;
+.colaborador h2 {
+  margin-bottom: 10px; /* Espaciado inferior aumentado */
+  font-size: 20px; /* Tamaño de fuente aumentado */
 }
 
-.maxContainer {
-    display: flex;
-    justify-content: center;
-    /* Centrar los elementos horizontalmente */
-    align-items: center;
-    /* Centrar los elementos verticalmente */
-    flex-wrap: wrap;
-    /* Permitir que los elementos se envuelvan en varias líneas si es necesario */
-    justify-content: space-around;
-    margin-top: 5vh;
-}
-
-.card-body {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: -100%;
-    position: absolute;
-    background-color: rgba(53, 53, 53, 0.521);
-    backdrop-filter: blur(5px);
-    border-radius: 10px;
-    color: white;
-    text-align: left;
-    transition: 2s;
-}
-
-.cart-title {
-    color: white;
-}
-
-.card-info {
-    font-size: 13px;
-    line-height: 25px;
-    margin: 20px 0;
-    font-weight: 400;
+.colaborador p {
+  margin-bottom: 10px; /* Espaciado inferior aumentado */
 }
