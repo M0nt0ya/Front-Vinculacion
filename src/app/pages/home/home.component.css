@@ -1,41 +1,58 @@
-/* Estilos de la sección hero */
+
+
 .hero-section {
   position: relative;
-  background-image: url('../../../assets/img/fondo.png'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
-  background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-  background-position: center; /* Centra la imagen en el fondo */
+  background-image: url('../../../assets/img/fondo.png');
+  /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta de tu imagen */
+  background-size: cover;
+  /* Ajusta la imagen para que cubra todo el fondo */
+  background-position: center;
+  /* Centra la imagen en el fondo */
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
 .hero-content {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  color: #fff;
+  height: 100%;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-
+  background: linear-gradient(to right, #ed4b362b, #17a94a67, #0784ba77, #fab12b77, #33586d77, #6dbc9f77, #6691a477, #343f8977);
 }
 
 .hero-content h1 {
   font-size: 3em;
-  margin-bottom: 20px;
-  color: #ffffff;
-  -webkit-text-stroke-width: 5%; /* Ancho del borde */
-  text-shadow: 9px 9px 0 #17a94b, -9px -9px 0 #0783ba, 9px -9px 0 #fab32b, -9px 9px 0 #33586d; /* Sombras para simular el gradiente */
+  margin: 0 0 10px; /* Ajustar margen inferior */
+  color: transparent;
+  -webkit-text-stroke-width: 5%;
+  text-shadow: 2px 2px 0 #17a94b, -2px -2px 0 #ffffff, 2px -2px 0 #fab32b, -2px 2px 0 #33586d;
 }
 
+.hero-content h1 .part1 {
+  color: #ffffff;
+}
 
+.hero-content h1 .part2 {
+  color: #ffffff;
+}
 
 .hero-content p {
-  font-size: 1.5em;
-  opacity: 0.9;
+  font-size: 2em;
+  margin: 0; /* Eliminar margen */
+  color: #ffffff ;
+  -webkit-text-stroke-width: 5%;
+  text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #0784ba, 1px -1px 0 #fab12b, -1px 1px 0 #33586d;
 }
+
+
 
 /* Estilos de la sección de información */
 .content-wrapper {
@@ -93,4 +110,3 @@
 .card-content p {
   color: #666;
 }
-
