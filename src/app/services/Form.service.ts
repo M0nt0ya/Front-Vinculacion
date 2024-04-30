@@ -20,4 +20,8 @@ export class FormService {
   getAllForms(): Observable<FormResponse[]> {
     return this.http.get<FormResponse[]>(`${this.baseUrl}/all`);
   }
+
+  deleteForm(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${id}`);
+  }
 }

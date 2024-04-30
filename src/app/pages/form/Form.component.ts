@@ -11,11 +11,12 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./Form.component.css']
 })
 export class FormComponent implements OnInit {
-
   navigationSubscription;
   username: string;
   forms: FormResponse[] = [];
-  //formData: FormRequest = { name: '', lastName: '', comment: '' };
+  formToDeleteId: number | null = null;
+  isDeleteModalVisible: boolean = false;
+
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -50,17 +51,6 @@ export class FormComponent implements OnInit {
     }
   }
 
-  // Método para enviar el formulario al backend
-  /* submitForm(): void {
-    this.formService.submitForm(this.formData).subscribe(response => {
-      console.log('Form submitted successfully:', response);
-      //this.loadForms(); // Actualizar la lista de formularios después de enviar uno nuevo
-    }, error => {
-      console.error('Error submitting form:', error);
-    });
-  } */
-
-  // Método para cargar la lista de formularios desde el backend
   loadForms(): void {
     this.formService.getAllForms().subscribe(forms => {
       this.forms = forms;
@@ -69,8 +59,36 @@ export class FormComponent implements OnInit {
     });
   }
 
+  openDeleteConfirmationModal(id: number): void {
+    this.formToDeleteId = id;
+    this.isDeleteModalVisible = true;
+  }
+
+  confirmDelete(): void {
+    if (this.formToDeleteId !== null) {
+      this.formService.deleteForm(this.formToDeleteId).subscribe(() => {
+        this.loadForms();
+        this.isDeleteModalVisible = false;
+      }, error => {
+        console.error('Error deleting form:', error);
+        this.isDeleteModalVisible = false; 
+      });
+    }
+  }
+
+  cancelDelete(): void {
+    this.formToDeleteId = null;
+    this.isDeleteModalVisible = false;
+  }
+
+
 
   logout(): void {
-    this.authService.logout();
-  }
+    try {
+        this.authService.logout();
+    } catch (error) {
+        console.error('Error al cerrar sesión:', error);
+    }
+        this.router.navigate(['/']); 
+}
 }
