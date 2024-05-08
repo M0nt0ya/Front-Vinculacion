@@ -15,6 +15,7 @@ a {
 .footer {
     background: linear-gradient(to right, #ed4b362b, #17a94a67, #0784ba77, #fab12b77, #33586d77, #6dbc9f77, #6691a477, #343f8977);
     color: #fff;
+    width: 100%;
 }
 
 .footer-wave-svg {

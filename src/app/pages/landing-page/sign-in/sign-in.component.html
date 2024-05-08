@@ -1,4 +1,5 @@
-<form [formGroup]="form" (ngSubmit)="signIn()">
+<app-header></app-header>
+<!-- <form [formGroup]="form" (ngSubmit)="signIn()">
 
     <label>Usuario</label>
     <div>
@@ -19,4 +20,26 @@
         <a href="/sign-up">¿No tienes Cuenta? Registrate</a>
     </div>
 
-</form>
+</form> -->
+<div class="overlay">
+    <form [formGroup]="form" (ngSubmit)="signIn()">
+        <div class="con">
+            <header class="head-form">
+                <h1><span class="part1">Inicio de sesión </span></h1>
+                <p>Fundación para la ayuda y desarrollo social</p>
+            </header>
+            <span *ngIf="!form.get('username')?.valid && form.get('username')?.touched" style="color:red ;">Porfavor
+                ingresa
+                el Usuario</span>
+            <input [formControlName]="'username'" class="form-input" id="txt-input" type="text" placeholder="Nombre de Usuario" required>
+
+
+            <span *ngIf="!form.get('password')?.valid && form.get('password')?.touched" style="color:red ;">Ingresa la
+                contraseña</span>
+            <input [formControlName]="'password'" class="form-input" type="password" placeholder="Contraseña" id="pwd" name="password" required>
+
+            <button class="log-in"> Acceso </button>
+        </div>
+    </form>
+</div>
+<app-footer></app-footer>

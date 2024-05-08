@@ -1,5 +1,6 @@
 export interface FormRequest {
     name: string;
-    lastName: string;
+    phone: string;
+    email: string;
     comment: string;
 }

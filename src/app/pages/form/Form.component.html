@@ -1,6 +1,6 @@
 <header class="encabezado fixed-top" role="banner" id="encabezado">
     <div class="container">
-        <a href="/home" class="logo">
+        <a href="/home" class="logo" (click)="logout()">
             <img src="assets/images/Logo_Fundacion.png" alt="Logo del titulo">
         </a>
         <button type="button" class="boton-menu d-md-none" data-toggle="collapse" data-target="#menu-principal"
@@ -24,8 +24,9 @@
                 <thead>
                     <tr>
                         <th> Id </th>
-                        <th> Nombre</th>
-                        <th> Apellido </th>
+                        <th> Nombres</th>
+                        <th> Telefono </th>
+                        <th> Correo </th>
                         <th> Comentario </th>
                         <th> Eliminar </th>
                     </tr>
@@ -34,7 +35,8 @@
                     <tr *ngFor="let form of forms">
                         <td> {{ form.id }}</td>
                         <td> {{ form.name }}</td>
-                        <td> {{ form.lastName }}</td>
+                        <td> {{ form.phone }}</td>
+                        <td> {{ form.email }}</td>
                         <td> {{ form.comment}}</td>
                         <td>
                             <button class="btn btn-danger"

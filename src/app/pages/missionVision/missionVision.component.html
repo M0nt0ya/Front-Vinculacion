@@ -82,23 +82,6 @@
     <a class="ir-arriba" data-scroll href="#encabezado"><i class="fas fa-arrow-circle-up" aria-hidden="true"></i></a>
 
 
-    <form (ngSubmit)="submitForm()">
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
-        </div>
-        <div>
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" [(ngModel)]="formData.lastName" required>
-        </div>
-        <div>
-            <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" [(ngModel)]="formData.comment" required></textarea>
-        </div>
-        <button type="submit">Submit</button>
-    </form>
-
-
 
 </body>
 
