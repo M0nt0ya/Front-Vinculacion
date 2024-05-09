@@ -14,6 +14,7 @@ import { SignInComponent } from './landing-page/sign-in/sign-in.component';
 import { SignUpComponent } from './landing-page/sign-up/sign-up.component';
 import { MissionVisionComponent } from './missionVision/missionVision.component';
 import { FormComponent } from './form/Form.component';
+import { ConsultancyComponent } from './consultancy/consultancy.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormComponent } from './form/Form.component';
     MissionVisionComponent,
     SignInComponent,
     SignUpComponent,
-    FormComponent
+    FormComponent,
+    ConsultancyComponent
 
   ],
   imports: [

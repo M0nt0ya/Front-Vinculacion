@@ -5,6 +5,7 @@ import { CollaboratorsComponent } from './collaborators/collaborators.component'
 import { ContactComponent } from './contact/contact.component';
 import { FormComponent } from './form/Form.component';
 import { HomeComponent } from './home/home.component';
+import { ConsultancyComponent } from './consultancy/consultancy.component';
 
 const routes: Routes = [
   { path: 'collaborators', component: CollaboratorsComponent },
@@ -12,7 +13,9 @@ const routes: Routes = [
   //{ path: 'mission-vision', component: MissionVisionComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'form', component: FormComponent, canActivate: [AuthGuard] }]
+  { path: 'form', component: FormComponent, canActivate: [AuthGuard] },
+  { path: 'consultancy', component:ConsultancyComponent}
+]
   ;
 
 @NgModule({
