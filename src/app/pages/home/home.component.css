@@ -170,9 +170,10 @@
 }
 
 .course-preview2 {
-  background-image: url(../../../assets/img/4.png);
+  background-image: url(../../../assets/assesory.png);
   color: #ffffff;
-  max-width: 250px;
+  max-width: auto;
+  background-size: cover;
 }
 
 .course-preview a {
@@ -226,7 +227,7 @@
 }
 
 .btn {
-  background: #EE2A42;
+  background: #0C4480;
   border: 0;
   border-radius: 50px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -244,7 +245,7 @@
 }
 
 .btn:hover {
-  background: #D0213D;
+  background: #10549c;
 }
 
 #icon {
