@@ -1,0 +1,40 @@
+header {
+  font-weight: bold;
+  color: #0D4373;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header h1 {
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+}
+
+header h1 img {
+  height: 80px; /* Ajusta el tamaño de la imagen según sea necesario */
+  margin-right: 20px; /* Ajusta el espacio entre la imagen y el texto */
+  opacity: 1;
+}
+
+header img {
+  height: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+  opacity: 0.2; /* Cambia la opacidad de las imágenes */
+  margin-right: 10px; /* Ajusta el espacio entre la imagen y el texto */
+}
+
+/* Collage de fotos */
+
+
+
+footer {
+  background-color: #0D4373;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
