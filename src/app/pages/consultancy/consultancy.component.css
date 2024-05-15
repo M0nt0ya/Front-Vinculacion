@@ -4,7 +4,7 @@ header {
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 header h1 {
@@ -14,18 +14,29 @@ header h1 {
 }
 
 header h1 img {
-  height: 80px; /* Ajusta el tamaño de la imagen según sea necesario */
-  margin-right: 20px; /* Ajusta el espacio entre la imagen y el texto */
+  height: 80px;
+  margin-right: 20px;
   opacity: 1;
 }
 
 header img {
-  height: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
-  opacity: 0.2; /* Cambia la opacidad de las imágenes */
-  margin-right: 10px; /* Ajusta el espacio entre la imagen y el texto */
+  height: 50px;
+  opacity: 0.2;
+  margin-right: 10px;
 }
 
-/* Collage de fotos */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header h1 {
+    margin-bottom: 20px;
+  }
+}
+
 main {
   display: flex;
   align-items: center;
@@ -40,14 +51,16 @@ main img {
   margin-right: 20px;
 }
 
-.span1{
+.span1 {
   color: #0d4373;
   font-weight: bold;
 }
-.span2{
+
+.span2 {
   color: #0d4373;
   font-size: large;
 }
+
 main p {
   font-size: x-large;
   padding: 100px;
@@ -66,7 +79,6 @@ button {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
 }
 
 button:hover {

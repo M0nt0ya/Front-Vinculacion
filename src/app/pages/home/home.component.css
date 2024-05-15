@@ -134,9 +134,7 @@
 
 .courses-container {
   width: 50%;
-  /* Establece el ancho del contenedor */
   margin: 0 auto;
-  /* Centra el contenedor horizontalmente */
 }
 
 .course {
@@ -253,6 +251,7 @@
   vertical-align: middle;
   margin-left: 5px;
 }
+
 /* SOCIAL PANEL CSS */
 .social-panel-container {
   position: fixed;
@@ -299,4 +298,48 @@
 app-footer {
   position: relative;
   margin-top: -100px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: 80vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .right-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .courses-container {
+    width: 100%;
+  }
+
+  .course {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .social-panel-container {
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero-section {
+    height: 50vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5em;
+  }
 }

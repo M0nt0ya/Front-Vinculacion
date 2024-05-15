@@ -166,3 +166,29 @@ button:hover {
         transform: translateY(5px);
     }
 }
+
+/* Estilos para hacer que los elementos sean más responsivos */
+@media screen and (max-width: 768px) {
+
+    .overlay,
+    form {
+        width: 90%;
+        /* Ajustar el ancho para que se adapte al tamaño de la pantalla */
+        margin: 2% auto;
+        /* Ajustar el margen */
+        padding: 8%;
+        /* Reducir el relleno */
+    }
+
+    .form-input {
+        width: 100%;
+        /* Utilizar el ancho completo para los campos de entrada */
+    }
+
+    button {
+        width: 100%;
+        /* Utilizar el ancho completo para los botones */
+        margin: 7% auto;
+        /* Ajustar el margen */
+    }
+}

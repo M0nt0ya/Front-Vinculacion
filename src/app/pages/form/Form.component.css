@@ -629,3 +629,25 @@ tbody td.active {
 .btn:hover {
     opacity: 0.8;
 }
+
+
+/* Para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+    .footer-content {
+        max-width: 100%; /* Utilizar todo el ancho disponible */
+        padding: 20px; /* Ajustar el padding */
+    }
+    
+    .footer-social-links {
+        position: relative; /* Cambiar posición a relativa */
+        width: 100%; /* Utilizar todo el ancho disponible */
+        height: auto; /* Ajustar altura automáticamente */
+        margin-top: 20px; /* Agregar margen superior */
+    }
+    
+    .footer-social-link {
+        position: static; /* Cambiar posición a estática */
+        display: inline-block; /* Cambiar a display en línea */
+        margin-right: 10px; /* Ajustar margen derecho */
+    }
+}

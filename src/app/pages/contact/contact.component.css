@@ -67,20 +67,17 @@ iframe {
   height: 10%;
 }
 
+
 .cantact_info {
-  width: 15%;
+  width: 80px;
+  height: 80px;
   position: relative;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: wheat;
-  background-image: url('../../../assets/img/4.png');
-  background-size: cover;
-  background-position: center center;
-
+  background-image: url('../../../assets/images/Logo_Fundacion.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
 }
+
 
 form.form_contact {
   width: 75%;
@@ -166,4 +163,39 @@ form.form_contact input[type="submit"] {
 
 form.form_contact input[type="submit"]:hover {
   background: linear-gradient(to right, #ed4b362b, #17a94a67, #0784ba77, #fab12b77, #33586d77, #6dbc9f77, #6691a477, #343f8977);
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .form_wrap {
+    flex-direction: column; /* Cambiar a una disposición de columna para pantallas más pequeñas */
+    width: 90%; /* Ajustar el ancho del formulario */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    margin: 20px auto; /* Ajustar el margen */
+  }
+
+  .cantact_info {
+    width: 60px; /* Reducir el tamaño del logo */
+    height: 60px; /* Reducir el tamaño del logo */
+  }
+
+  form.form_contact {
+    width: 100%; /* Utilizar el ancho completo */
+    padding: 20px; /* Ajustar el relleno */
+  }
+
+  form.form_contact h2 {
+    font-size: 20px; /* Reducir el tamaño del título */
+    margin-bottom: 20px; /* Ajustar el margen inferior del título */
+  }
+
+  form.form_contact input,
+  form.form_contact textarea {
+    width: 100%; /* Utilizar el ancho completo para los campos de entrada */
+    margin-bottom: 15px; /* Ajustar el margen inferior */
+  }
+
+  form.form_contact input[type="submit"] {
+    width: 100%; /* Utilizar el ancho completo para el botón de enviar */
+  }
 }

@@ -213,3 +213,27 @@ p {
     transition-delay: 300ms;
   }
 }
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Cambiar a una disposición de columna para pantallas más pequeñas */
+    align-items: center; /* Alinear los elementos al centro */
+  }
+
+  .card {
+    width: 80%; /* Reducir el ancho de la tarjeta */
+    margin-bottom: 30px; /* Ajustar el margen inferior entre tarjetas */
+  }
+
+  .card:nth-child(2),
+  .card:nth-child(3) {
+    margin-top: 0; /* Eliminar el margen superior para las tarjetas del medio */
+  }
+}
+
+/* Estilos para pantallas aún más pequeñas */
+@media screen and (max-width: 576px) {
+  .card {
+    width: 100%; /* Utilizar el ancho completo para pantallas más pequeñas */
+  }
+}
